@@ -339,7 +339,7 @@ function ContactFormContent() {
                   </strong>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
                     Monday &ndash; Saturday: 9:00 AM &ndash; 8:30 PM<br />
-                    Sunday: 10:00 AM &ndash; 6:00 PM
+                    Sunday: 9:00 AM &ndash; 6:00 PM
                   </p>
                 </div>
               </div>
