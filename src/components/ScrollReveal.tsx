@@ -19,7 +19,7 @@ export function ScrollReveal({
   children,
   direction = "up",
   delay = 0,
-  duration = 1000,
+  duration = 2000,
   distance = 45,
   className = "",
   threshold = 0.08,

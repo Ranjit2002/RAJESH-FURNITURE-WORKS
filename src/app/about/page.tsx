@@ -76,7 +76,7 @@ export default function AboutPage() {
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-20 overflow-x-hidden">
       {/* Hero Story Banner */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <ScrollReveal direction="left" duration={1000} distance={45} className="lg:col-span-7 space-y-6">
+        <ScrollReveal direction="left" duration={2000} distance={45} className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
             <Hammer className="w-3.5 h-3.5" />
             Our Heritage & Story
@@ -120,7 +120,7 @@ export default function AboutPage() {
         </ScrollReveal>
 
         {/* Feature Image Banner */}
-        <ScrollReveal direction="right" duration={1000} distance={45} className="lg:col-span-5">
+        <ScrollReveal direction="right" duration={2000} distance={45} className="lg:col-span-5">
           <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-amber-950/50 bg-zinc-900 group">
             <Image
               src="/furniture/hall_1.jpg"
@@ -144,7 +144,7 @@ export default function AboutPage() {
 
       {/* Craftsmanship Pillars */}
       <section className="space-y-10">
-        <ScrollReveal direction="up" duration={1000}>
+        <ScrollReveal direction="up" duration={2000}>
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5" />
@@ -171,7 +171,7 @@ export default function AboutPage() {
                 key={idx}
                 direction={direction}
                 delay={delay}
-                duration={1000}
+                duration={2000}
                 distance={35}
               >
                 <div className="p-6 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full">
@@ -195,7 +195,7 @@ export default function AboutPage() {
 
       {/* Meet the Master Craftsmen - The Vishwakarma Brothers */}
       <section className="space-y-10">
-        <ScrollReveal direction="up" duration={1000}>
+        <ScrollReveal direction="up" duration={2000}>
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
               <Users className="w-3.5 h-3.5" />
@@ -221,7 +221,7 @@ export default function AboutPage() {
                 key={idx}
                 direction={direction}
                 delay={delay}
-                duration={1000}
+                duration={2000}
                 distance={40}
               >
                 <div className="p-7 rounded-2xl bg-white dark:bg-[#16120f] border border-zinc-200/80 dark:border-amber-950/40 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between h-full">
@@ -267,7 +267,7 @@ export default function AboutPage() {
 
       {/* Workshop Visit Banner */}
       <section className="p-8 sm:p-12 rounded-3xl bg-linear-to-r from-amber-600 via-amber-700 to-amber-800 text-zinc-950 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
-        <ScrollReveal direction="left" duration={1000} className="space-y-2 max-w-xl text-center md:text-left">
+        <ScrollReveal direction="left" duration={2000} className="space-y-2 max-w-xl text-center md:text-left">
           <h3 className="text-2xl sm:text-3xl font-serif font-black tracking-tight text-zinc-950">
             Visit Our Workshop & Touch the Seasoned Timber
           </h3>
@@ -275,7 +275,7 @@ export default function AboutPage() {
             Nothing compares to smelling freshly milled teak shavings and inspecting timber grain in person. Schedule a walkthrough of our workshop.
           </p>
         </ScrollReveal>
-        <ScrollReveal direction="right" duration={1000} className="flex flex-col sm:flex-row gap-3 shrink-0">
+        <ScrollReveal direction="right" duration={2000} className="flex flex-col sm:flex-row gap-3 shrink-0">
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-white font-bold text-sm tracking-wide shadow-xl transition-all"

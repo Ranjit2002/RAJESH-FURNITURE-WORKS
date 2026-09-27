@@ -41,7 +41,7 @@ function FurnitureCatalogContent() {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-10 overflow-hidden">
       {/* Header Banner */}
-      <ScrollReveal direction="down" duration={1000}>
+      <ScrollReveal direction="down" duration={2000}>
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
@@ -57,7 +57,7 @@ function FurnitureCatalogContent() {
       </ScrollReveal>
 
       {/* Search & Category Filter Controls */}
-      <ScrollReveal direction="up" delay={100} duration={1000}>
+      <ScrollReveal direction="up" delay={100} duration={2000}>
         <div className="space-y-4 bg-zinc-50 dark:bg-[#15110e] p-4 sm:p-6 rounded-2xl border border-zinc-200/80 dark:border-amber-950/40 shadow-sm">
           {/* Search Bar */}
           <div className="relative w-full">
@@ -150,7 +150,7 @@ function FurnitureCatalogContent() {
                 key={item.id}
                 direction={direction}
                 delay={delay}
-                duration={1000}
+                duration={2000}
                 distance={40}
               >
                 <FurnitureCard

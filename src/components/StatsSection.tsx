@@ -45,7 +45,7 @@ export function StatsSection() {
                 key={idx}
                 direction={direction}
                 delay={delay}
-                duration={1000}
+                duration={2000}
                 distance={35}
               >
                 <div className="relative p-6 rounded-2xl bg-white dark:bg-[#181310] border border-zinc-200/80 dark:border-amber-900/30 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 group h-full">

@@ -42,7 +42,7 @@ export function WoodSpeciesGuide() {
     <section className="py-20 bg-zinc-50 dark:bg-[#0f0c0a] border-y border-zinc-200/80 dark:border-amber-950/40 transition-colors overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <ScrollReveal direction="left" duration={1000} className="max-w-2xl space-y-3">
+          <ScrollReveal direction="left" duration={2000} className="max-w-2xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
               <TreePine className="w-3.5 h-3.5" />
               Material Authenticity
@@ -55,7 +55,7 @@ export function WoodSpeciesGuide() {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal direction="right" duration={1000}>
+          <ScrollReveal direction="right" duration={2000}>
             <div className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-500/10 px-4 py-2 rounded-xl border border-amber-500/20 shrink-0 self-start md:self-auto">
               100% Non-Toxic & Termite Proof
             </div>
@@ -73,7 +73,7 @@ export function WoodSpeciesGuide() {
                 key={idx}
                 direction={direction}
                 delay={delay}
-                duration={1000}
+                duration={2000}
                 distance={35}
               >
                 <div className="p-6 rounded-2xl bg-white dark:bg-[#16120f] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-between">
