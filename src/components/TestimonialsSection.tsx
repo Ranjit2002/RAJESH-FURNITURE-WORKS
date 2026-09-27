@@ -1,5 +1,6 @@
 import React from "react";
 import { Star, Quote, CheckCircle } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function TestimonialsSection() {
   const reviews = [
@@ -30,58 +31,71 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-[#0c0907] transition-colors">
+    <section className="py-20 bg-white dark:bg-[#0c0907] transition-colors overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
-            <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-            Client Accolades
+        <ScrollReveal direction="up" duration={700}>
+          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
+              <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
+              Client Accolades
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+              Trusted by Connoisseurs of Fine Wood
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+              Over 3,500 homeowners, interior designers, and architects have entrusted their dream furniture commissions to our workshop.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
-            Trusted by Connoisseurs of Fine Wood
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
-            Over 3,500 homeowners, interior designers, and architects have entrusted their dream furniture commissions to our workshop.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((rev, idx) => (
-            <div
-              key={idx}
-              className="p-7 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1">
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-amber-400 text-amber-400"
-                      />
-                    ))}
-                  </div>
-                  <Quote className="w-6 h-6 text-amber-500/30" />
-                </div>
-                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed italic mb-6">
-                  &ldquo;{rev.quote}&rdquo;
-                </p>
-              </div>
+          {reviews.map((rev, idx) => {
+            // Review 0 from left, Review 1 from up, Review 2 from right
+            const direction = idx === 0 ? "left" : idx === 2 ? "right" : "up";
+            const delay = idx * 120;
 
-              <div className="pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80">
-                <h4 className="font-serif font-bold text-base text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
-                  {rev.name}
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                </h4>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                  {rev.role}
-                </p>
-                <div className="mt-2 inline-block px-2.5 py-1 text-[11px] font-medium rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
-                  Project: {rev.project}
+            return (
+              <ScrollReveal
+                key={idx}
+                direction={direction}
+                delay={delay}
+                duration={700}
+                distance={35}
+              >
+                <div className="p-7 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-1">
+                        {[...Array(rev.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-amber-400 text-amber-400"
+                          />
+                        ))}
+                      </div>
+                      <Quote className="w-6 h-6 text-amber-500/30" />
+                    </div>
+                    <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed italic mb-6">
+                      &ldquo;{rev.quote}&rdquo;
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80">
+                    <h4 className="font-serif font-bold text-base text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
+                      {rev.name}
+                      <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                    </h4>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                      {rev.role}
+                    </p>
+                    <div className="mt-2 inline-block px-2.5 py-1 text-[11px] font-medium rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                      Project: {rev.project}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

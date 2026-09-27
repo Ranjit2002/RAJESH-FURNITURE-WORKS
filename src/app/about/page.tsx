@@ -13,6 +13,7 @@ import {
   PhoneCall,
   Clock,
 } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata = {
   title: "About Us | Rajesh Furniture Works - Heritage Woodcraft & Bespoke Interiors",
@@ -72,10 +73,10 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-20">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-20 overflow-x-hidden">
       {/* Hero Story Banner */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-7 space-y-6">
+        <ScrollReveal direction="left" duration={750} distance={45} className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
             <Hammer className="w-3.5 h-3.5" />
             Our Heritage & Story
@@ -116,64 +117,77 @@ export default function AboutPage() {
               </span>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Feature Image Banner */}
-        <div className="lg:col-span-5 relative aspect-4/5 w-full rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-amber-950/50 bg-zinc-900 group">
-          <Image
-            src="/furniture/hall_1.jpg"
-            alt="Rajesh Furniture Works Craftsmanship Showcase"
-            fill
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6 text-white p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 space-y-1">
-            <span className="text-amber-400 font-serif font-bold text-lg block">
-              The Rajesh Furniture Standard
-            </span>
-            <p className="text-xs text-zinc-300">
-              Every curve hand-sculpted, every surface hand-buffed to perfection.
-            </p>
+        <ScrollReveal direction="right" duration={750} distance={45} className="lg:col-span-5">
+          <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-amber-950/50 bg-zinc-900 group">
+            <Image
+              src="/furniture/hall_1.jpg"
+              alt="Rajesh Furniture Works Craftsmanship Showcase"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 text-white p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 space-y-1">
+              <span className="text-amber-400 font-serif font-bold text-lg block">
+                The Rajesh Furniture Standard
+              </span>
+              <p className="text-xs text-zinc-300">
+                Every curve hand-sculpted, every surface hand-buffed to perfection.
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Craftsmanship Pillars */}
       <section className="space-y-10">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5" />
-            Our Guiding Values
+        <ScrollReveal direction="up" duration={650}>
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
+              <Sparkles className="w-3.5 h-3.5" />
+              Our Guiding Values
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+              Why Our Furniture Endures for Generations
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+              In an era of disposable flat-pack furniture, we proudly champion timeless timber integrity.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
-            Why Our Furniture Endures for Generations
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
-            In an era of disposable flat-pack furniture, we proudly champion timeless timber integrity.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
+            // Pillars 0 & 1 from left, 2 & 3 from right
+            const direction = idx < 2 ? "left" : "right";
+            const delay = (idx % 2) * 120;
+
             return (
-              <div
+              <ScrollReveal
                 key={idx}
-                className="p-6 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                direction={direction}
+                delay={delay}
+                duration={700}
+                distance={35}
               >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-4">
-                    <Icon className="w-6 h-6" />
+                <div className="p-6 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-4">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="font-serif font-bold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                      {pillar.desc}
+                    </p>
                   </div>
-                  <h3 className="font-serif font-bold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                    {pillar.desc}
-                  </p>
                 </div>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>
@@ -181,74 +195,87 @@ export default function AboutPage() {
 
       {/* Meet the Master Craftsmen - The Vishwakarma Brothers */}
       <section className="space-y-10">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
-            <Users className="w-3.5 h-3.5" />
-            The Vishwakarma Brothers
+        <ScrollReveal direction="up" duration={650}>
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
+              <Users className="w-3.5 h-3.5" />
+              The Vishwakarma Brothers
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+              Brothers in Woodcraft & Leadership
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+              Rajesh Furniture Works is proudly driven by the three Vishwakarma brothers — uniting over 73 combined years of business stewardship, heirloom hand-carving, and modern precision engineering.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
-            Brothers in Woodcraft & Leadership
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
-            Rajesh Furniture Works is proudly driven by the three Vishwakarma brothers — uniting over 73 combined years of business stewardship, heirloom hand-carving, and modern precision engineering.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {masters.map((master, idx) => (
-            <div
-              key={idx}
-              className="p-7 rounded-2xl bg-white dark:bg-[#16120f] border border-zinc-200/80 dark:border-amber-950/40 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-serif font-black text-xl">
-                    {master.name.charAt(0)}
-                  </div>
-                  <span className="px-3 py-1 text-[11px] font-semibold rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
-                    {master.brotherTitle}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100">
-                    {master.name}
-                  </h3>
-                  <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 block mt-0.5">
-                    {master.role}
-                  </span>
-                  <span className="text-[11px] text-zinc-500 dark:text-zinc-400 block mt-0.5 font-medium">
-                    {master.experience}
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                  {master.bio}
-                </p>
-              </div>
+          {masters.map((master, idx) => {
+            // Rajesh (CEO) from left, Ramesh (Craftsman) from up, Bijendra (Precision) from right
+            const direction = idx === 0 ? "left" : idx === 2 ? "right" : "up";
+            const delay = idx * 120;
 
-              <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800/80 text-xs">
-                <span className="text-zinc-500 dark:text-zinc-400 block text-[11px] uppercase tracking-wider font-semibold">
-                  Core Mastery:
-                </span>
-                <span className="font-medium text-amber-700 dark:text-amber-400/90 mt-0.5 block">
-                  {master.specialty}
-                </span>
-              </div>
-            </div>
-          ))}
+            return (
+              <ScrollReveal
+                key={idx}
+                direction={direction}
+                delay={delay}
+                duration={750}
+                distance={40}
+              >
+                <div className="p-7 rounded-2xl bg-white dark:bg-[#16120f] border border-zinc-200/80 dark:border-amber-950/40 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between h-full">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-serif font-black text-xl">
+                        {master.name.charAt(0)}
+                      </div>
+                      <span className="px-3 py-1 text-[11px] font-semibold rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                        {master.brotherTitle}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100">
+                        {master.name}
+                      </h3>
+                      <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 block mt-0.5">
+                        {master.role}
+                      </span>
+                      <span className="text-[11px] text-zinc-500 dark:text-zinc-400 block mt-0.5 font-medium">
+                        {master.experience}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                      {master.bio}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800/80 text-xs">
+                    <span className="text-zinc-500 dark:text-zinc-400 block text-[11px] uppercase tracking-wider font-semibold">
+                      Core Mastery:
+                    </span>
+                    <span className="font-medium text-amber-700 dark:text-amber-400/90 mt-0.5 block">
+                      {master.specialty}
+                    </span>
+                  </div>
+                </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </section>
 
       {/* Workshop Visit Banner */}
-      <section className="p-8 sm:p-12 rounded-3xl bg-linear-to-r from-amber-600 via-amber-700 to-amber-800 text-zinc-950 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="space-y-2 max-w-xl text-center md:text-left">
+      <section className="p-8 sm:p-12 rounded-3xl bg-linear-to-r from-amber-600 via-amber-700 to-amber-800 text-zinc-950 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+        <ScrollReveal direction="left" duration={700} className="space-y-2 max-w-xl text-center md:text-left">
           <h3 className="text-2xl sm:text-3xl font-serif font-black tracking-tight text-zinc-950">
             Visit Our Workshop & Touch the Seasoned Timber
           </h3>
           <p className="text-sm text-zinc-900/90 leading-relaxed">
             Nothing compares to smelling freshly milled teak shavings and inspecting timber grain in person. Schedule a walkthrough of our workshop.
           </p>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+        </ScrollReveal>
+        <ScrollReveal direction="right" duration={700} className="flex flex-col sm:flex-row gap-3 shrink-0">
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-white font-bold text-sm tracking-wide shadow-xl transition-all"
@@ -262,7 +289,7 @@ export default function AboutPage() {
           >
             Browse Catalog
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
     </div>
   );
