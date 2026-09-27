@@ -1,0 +1,134 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { FURNITURE_DATA, FurnitureItem } from "@/data/furniture";
+import { HomeCarousel } from "@/components/HomeCarousel";
+import { FurnitureCard } from "@/components/FurnitureCard";
+import { FurnitureModal } from "@/components/FurnitureModal";
+import { StatsSection } from "@/components/StatsSection";
+import { CraftsmanshipJourney } from "@/components/CraftsmanshipJourney";
+import { WoodSpeciesGuide } from "@/components/WoodSpeciesGuide";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { BespokeBanner } from "@/components/BespokeBanner";
+import {
+  Sparkles,
+  ArrowRight,
+  SlidersHorizontal,
+  Flame,
+  Award,
+} from "lucide-react";
+
+export default function HomePage() {
+  const [selectedItem, setSelectedItem] = useState<FurnitureItem | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const categories = [
+    "All",
+    "Bedroom",
+    "Living Room",
+    "Mandir / Temple",
+    "Modular Kitchen",
+    "Wardrobes",
+  ];
+
+  const displayedItems =
+    activeCategory === "All"
+      ? FURNITURE_DATA.slice(0, 8)
+      : FURNITURE_DATA.filter((item) => item.category === activeCategory).slice(0, 8);
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Carousel Section */}
+      <section className="relative px-3 sm:px-6 lg:px-8 pt-4 pb-10 max-w-7xl mx-auto w-full">
+        <HomeCarousel onOpenModal={(item) => setSelectedItem(item)} />
+      </section>
+
+      {/* Stats Counter Section */}
+      <StatsSection />
+
+      {/* Featured Furniture Showcase */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+          <div className="space-y-3 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
+              <Award className="w-3.5 h-3.5" />
+              Handcrafted Masterpieces
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">
+              Curated Furniture Gallery
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+              Each creation is sculpted from kiln-seasoned hardwoods. Click any piece to inspect technical specifications, joinery, dimensions, and wood species.
+            </p>
+          </div>
+
+          <Link
+            href="/furniture"
+            className="inline-flex items-center gap-2 text-sm font-bold text-amber-600 dark:text-amber-400 hover:text-amber-500 group self-start md:self-auto shrink-0"
+          >
+            <span>View All 36 Works</span>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+
+        {/* Filter Pills */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
+                activeCategory === cat
+                  ? "bg-amber-500 text-zinc-950 font-bold shadow-md shadow-amber-500/25"
+                  : "bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-800"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Furniture Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayedItems.map((item) => (
+            <FurnitureCard
+              key={item.id}
+              item={item}
+              onOpenModal={(selected) => setSelectedItem(selected)}
+            />
+          ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/furniture"
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-bold text-sm tracking-wide shadow-xl hover:bg-amber-500 dark:hover:bg-amber-400 dark:hover:text-zinc-950 hover:text-zinc-950 transition-all hover:scale-102"
+          >
+            <span>Explore All 36 Catalog Creations with Full Specifications</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Craftsmanship Journey Process */}
+      <CraftsmanshipJourney />
+
+      {/* Timber & Materials Guide */}
+      <WoodSpeciesGuide />
+
+      {/* Testimonials */}
+      <TestimonialsSection />
+
+      {/* Call to action Banner */}
+      <BespokeBanner />
+
+      {/* Technical Specifications Modal */}
+      <FurnitureModal
+        item={selectedItem}
+        onClose={() => setSelectedItem(null)}
+      />
+    </div>
+  );
+}
