@@ -857,4 +857,18 @@ export const CATEGORIES = [
   "Dining & Balcony"
 ] as const;
 
-export const HERO_CAROUSEL_ITEMS = FURNITURE_DATA.filter((item) => item.isFeatured);
+// High-Resolution Widescreen items (1500px - 1600px wide) tailored for crystal-clear PC Full-Screen Hero Carousel with zero gaps
+const HIGH_RES_WIDESCREEN_IDS = [
+  "hall-01",    // 1600x900 (hall_1.jpg) - Grand Horizon Backlit Entertainment Unit
+  "bed-01",     // 1600x1215 (bedroom_1.jpeg) - Royal Heritage Fluted Master Bed
+  "dining-01",  // 1600x1040 (dining_1.jpeg) - Emperor 6-Seater Solid Teak Dining Suite
+  "hall-09",    // 1500x1071 (hall_9.jpeg) - Acoustic Slatted Feature Wall & Media Hub
+  "kitchen-02", // 1500x1049 (kitchen_2.jpeg) - Chef’s Island Parallel Kitchen Suite
+  "hall-11",    // 1500x1049 (hall_11.jpeg) - Architectural Screen & Open Niche Divider
+  "bed-08",     // 1600x1104 (bedroom_8.jpeg) - Verona Fluted Veneer King Bed
+  "hall-05",    // 1600x1040 (hall_5.jpeg) - Metropolitan Fluted Bar & Console Credenza
+];
+
+export const HERO_CAROUSEL_ITEMS: FurnitureItem[] = HIGH_RES_WIDESCREEN_IDS.map(
+  (id) => FURNITURE_DATA.find((item) => item.id === id)!
+).filter(Boolean);

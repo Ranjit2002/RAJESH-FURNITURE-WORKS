@@ -39,8 +39,8 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Carousel Section */}
-      <section className="relative px-3 sm:px-6 lg:px-8 pt-4 pb-10 max-w-7xl mx-auto w-full">
+      {/* Hero Carousel Section - Full Screen Edge-to-Edge (Zero Gaps Left & Right) */}
+      <section className="relative w-full overflow-hidden p-0 m-0">
         <HomeCarousel onOpenModal={(item) => setSelectedItem(item)} />
       </section>
 
