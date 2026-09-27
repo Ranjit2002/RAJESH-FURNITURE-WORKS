@@ -266,8 +266,10 @@ function ContactFormContent() {
                   <strong className="text-zinc-900 dark:text-zinc-100 block">
                     Workshop & Display Studio
                   </strong>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                    Rajesh Furniture Works Workshop, Industrial Woodcraft Estate, Main Furniture Market
+                  <p className="text-xs text-zinc-600 dark:text-zinc-300 mt-1 leading-relaxed">
+                    204, 2nd Floor, D-2,<br />
+                    Shree Ganesh Residency, Maitri Park,<br />
+                    Kasheli, Bhiwandi, Maharashtra 421302
                   </p>
                 </div>
               </div>

@@ -170,8 +170,8 @@ export function Footer() {
             <div className="space-y-3 text-xs sm:text-sm text-zinc-400">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>
-                  Rajesh Furniture Works Workshop, Industrial Craft Zone, Main Furniture Market
+                <span className="leading-relaxed">
+                  204, 2nd Floor, D-2, Shree Ganesh Residency, Maitri Park, Kasheli, Bhiwandi, Maharashtra 421302
                 </span>
               </div>
               <div className="flex items-start gap-2.5">

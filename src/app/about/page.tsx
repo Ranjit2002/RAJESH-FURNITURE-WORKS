@@ -46,25 +46,28 @@ export default function AboutPage() {
 
   const masters = [
     {
-      name: "Rajesh Suthar",
-      role: "Founder & Master Craftsman",
-      experience: "28+ Years of Woodcraft",
-      bio: "Born into a traditional family of Indian woodcarvers, Rajesh founded the workshop with a simple vow: create furniture with honest solid timber that families pass down across generations.",
-      specialty: "Architectural Doors & Master Bedroom Ensembles",
+      name: "Rajesh Vishwakarma",
+      role: "CEO & Company Head",
+      experience: "35+ Years of Experience",
+      brotherTitle: "Elder Brother & CEO",
+      bio: "As CEO, Rajesh Vishwakarma runs the company, guiding strategic vision, client partnerships, and large-scale architectural wood projects with over 35 years of timber leadership.",
+      specialty: "Company Leadership & Turnkey Architectural Projects",
     },
     {
-      name: "Master Ramchandra",
-      role: "Head Temple Sculptor & Relief Carver",
-      experience: "32+ Years of Stone & Wood Art",
-      bio: "A living legend in Vastu-compliant temple architecture. Master Ramchandra sculpts the intricate Shikhara domes, peacock reliefs, and sacred motifs on all our mandirs.",
-      specialty: "Sacred Pooja Mandirs & Classical Relief Carvings",
+      name: "Ramesh Vishwakarma",
+      role: "Master Craftsman & Head of Woodcraft",
+      experience: "28+ Years of Experience",
+      brotherTitle: "Brother & Master Craftsman",
+      bio: "The master craftsman of the family, Ramesh Vishwakarma commands 28+ years of hand-chiseling artistry, specializing in sacred temple mandirs, floral door reliefs, and solid teak joinery.",
+      specialty: "Hand-Carved Sacred Mandirs & Traditional Teak Joinery",
     },
     {
-      name: "Devendra Patel",
-      role: "Modular Kitchen & Cabinetry Engineer",
-      experience: "19+ Years Precision Joinery",
-      bio: "Blends traditional woodworking with German CNC machinery and Blum/Hafele hardware to deliver modern ergonomic modular kitchens and floor-to-ceiling wardrobes.",
-      specialty: "Waterproof BWP Marine Kitchens & Sliding Wardrobes",
+      name: "Bijendra Vishwakarma",
+      role: "Precision Working & Modular Specialist",
+      experience: "10+ Years of Experience",
+      brotherTitle: "Brother & Precision Specialist",
+      bio: "Renowned for his exceptional skill of precision working, Bijendra Vishwakarma brings millimeter accuracy to modern modular kitchens, luxury wardrobes, and high-tolerance CNC craftsmanship.",
+      specialty: "Precision Woodworking, Modular Kitchens & Wardrobes",
     },
   ];
 
@@ -176,18 +179,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Master Craftsmen */}
+      {/* Meet the Master Craftsmen - The Vishwakarma Brothers */}
       <section className="space-y-10">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
             <Users className="w-3.5 h-3.5" />
-            The Artisans
+            The Vishwakarma Brothers
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
-            Meet the Masters Behind the Chisel
+            Brothers in Woodcraft & Leadership
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
-            Generations of inherited skill, razor-sharp chisels, and a passion for flawless woodgrain matching.
+            Rajesh Furniture Works is proudly driven by the three Vishwakarma brothers — uniting over 73 combined years of business stewardship, heirloom hand-carving, and modern precision engineering.
           </p>
         </div>
 
@@ -198,17 +201,22 @@ export default function AboutPage() {
               className="p-7 rounded-2xl bg-white dark:bg-[#16120f] border border-zinc-200/80 dark:border-amber-950/40 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-serif font-black text-xl">
-                  {master.name.charAt(0)}
+                <div className="flex items-center justify-between">
+                  <div className="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-serif font-black text-xl">
+                    {master.name.charAt(0)}
+                  </div>
+                  <span className="px-3 py-1 text-[11px] font-semibold rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                    {master.brotherTitle}
+                  </span>
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100">
                     {master.name}
                   </h3>
-                  <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 block">
+                  <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 block mt-0.5">
                     {master.role}
                   </span>
-                  <span className="text-[11px] text-zinc-500 dark:text-zinc-400 block mt-0.5">
+                  <span className="text-[11px] text-zinc-500 dark:text-zinc-400 block mt-0.5 font-medium">
                     {master.experience}
                   </span>
                 </div>
