@@ -51,7 +51,7 @@ export default function HomePage() {
       {/* Featured Furniture Showcase */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full overflow-hidden">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-          <ScrollReveal direction="left" duration={700} className="space-y-3 max-w-2xl">
+          <ScrollReveal direction="left" duration={1000} className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
               <Award className="w-3.5 h-3.5" />
               Handcrafted Masterpieces
@@ -64,7 +64,7 @@ export default function HomePage() {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal direction="right" duration={700}>
+          <ScrollReveal direction="right" duration={1000}>
             <Link
               href="/furniture"
               className="inline-flex items-center gap-2 text-sm font-bold text-amber-600 dark:text-amber-400 hover:text-amber-500 group self-start md:self-auto shrink-0"
@@ -76,7 +76,7 @@ export default function HomePage() {
         </div>
 
         {/* Filter Pills */}
-        <ScrollReveal direction="left" delay={100} duration={600}>
+        <ScrollReveal direction="left" delay={100} duration={1000}>
           <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
             {categories.map((cat) => (
               <button
@@ -106,8 +106,8 @@ export default function HomePage() {
                 key={item.id}
                 direction={direction}
                 delay={delay}
-                duration={700}
-                distance={35}
+                duration={1000}
+                distance={40}
               >
                 <FurnitureCard
                   item={item}
@@ -119,7 +119,7 @@ export default function HomePage() {
         </div>
 
         {/* View All Button */}
-        <ScrollReveal direction="up" delay={150} duration={600} className="mt-12 text-center">
+        <ScrollReveal direction="up" delay={150} duration={1000} className="mt-12 text-center">
           <Link
             href="/furniture"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-bold text-sm tracking-wide shadow-xl hover:bg-amber-500 dark:hover:bg-amber-400 dark:hover:text-zinc-950 hover:text-zinc-950 transition-all hover:scale-102"

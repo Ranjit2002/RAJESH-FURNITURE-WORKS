@@ -10,27 +10,27 @@ export function BespokeBanner() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-600/15 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-        <ScrollReveal direction="down" duration={600}>
+        <ScrollReveal direction="down" duration={1000}>
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
             Turn Your Spatial Vision Into Timeless Woodcraft
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="left" duration={700}>
+        <ScrollReveal direction="left" duration={1000}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight text-white">
             Have a Custom Furniture Concept in Mind?
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal direction="right" duration={700} delay={100}>
+        <ScrollReveal direction="right" duration={1000} delay={100}>
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
             Whether you need a custom-dimensioned teak master bed, an architecturally carved temple mandir, or a complete turnkey home interior woodwork package — we bring master craftsmanship directly to your doorstep.
           </p>
         </ScrollReveal>
 
         {/* Action CTAs */}
-        <ScrollReveal direction="up" duration={700} delay={150}>
+        <ScrollReveal direction="up" duration={1000} delay={150}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Link
               href="/contact"
@@ -51,7 +51,7 @@ export function BespokeBanner() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="fade" delay={250} duration={800}>
+        <ScrollReveal direction="fade" delay={250} duration={1000}>
           <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs text-zinc-400">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-amber-400" />

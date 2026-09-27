@@ -77,7 +77,7 @@ function ContactFormContent() {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-16 overflow-x-hidden">
       {/* Header Banner */}
-      <ScrollReveal direction="down" duration={700}>
+      <ScrollReveal direction="down" duration={1000}>
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
@@ -95,7 +95,7 @@ function ContactFormContent() {
       {/* Main Grid: Form + Info Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Contact Form Column - from Left */}
-        <ScrollReveal direction="left" duration={750} distance={45} className="lg:col-span-7">
+        <ScrollReveal direction="left" duration={1000} distance={45} className="lg:col-span-7">
           <div className="bg-white dark:bg-[#14100d] p-6 sm:p-8 rounded-3xl border border-zinc-200/80 dark:border-amber-950/40 shadow-xl">
           {submitted ? (
             <div className="py-12 text-center space-y-4 animate-fadeIn">
@@ -254,7 +254,7 @@ function ContactFormContent() {
       </ScrollReveal>
 
       {/* Contact Info Cards Column - from Right */}
-      <ScrollReveal direction="right" duration={750} distance={45} className="lg:col-span-5 space-y-6">
+      <ScrollReveal direction="right" duration={1000} distance={45} className="lg:col-span-5 space-y-6">
         {/* Direct Workshop Details Card */}
         <div className="p-7 rounded-3xl bg-zinc-50 dark:bg-[#15110e] border border-zinc-200/80 dark:border-amber-950/40 shadow-lg space-y-5">
           <h3 className="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
@@ -406,7 +406,7 @@ function ContactFormContent() {
 
     {/* Frequently Asked Questions */}
     <section className="pt-10 border-t border-zinc-200 dark:border-zinc-800/80 space-y-8">
-      <ScrollReveal direction="up" duration={600}>
+      <ScrollReveal direction="up" duration={1000}>
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
             <HelpCircle className="w-3.5 h-3.5" />
@@ -428,7 +428,7 @@ function ContactFormContent() {
               key={idx}
               direction={direction}
               delay={delay}
-              duration={700}
+              duration={1000}
               distance={35}
             >
               <div className="p-6 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 space-y-2 h-full">

@@ -33,7 +33,7 @@ export function TestimonialsSection() {
   return (
     <section className="py-20 bg-white dark:bg-[#0c0907] transition-colors overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal direction="up" duration={700}>
+        <ScrollReveal direction="up" duration={1000}>
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
               <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
@@ -59,7 +59,7 @@ export function TestimonialsSection() {
                 key={idx}
                 direction={direction}
                 delay={delay}
-                duration={700}
+                duration={1000}
                 distance={35}
               >
                 <div className="p-7 rounded-2xl bg-zinc-50 dark:bg-[#14100d] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full">

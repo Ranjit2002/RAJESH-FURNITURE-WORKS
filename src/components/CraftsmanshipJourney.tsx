@@ -40,7 +40,7 @@ export function CraftsmanshipJourney() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <ScrollReveal direction="up" duration={700}>
+        <ScrollReveal direction="up" duration={1000}>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5" />
@@ -67,7 +67,7 @@ export function CraftsmanshipJourney() {
                 key={index}
                 direction={direction}
                 delay={delay}
-                duration={700}
+                duration={1000}
                 distance={35}
               >
                 <div className="relative p-6 sm:p-7 rounded-2xl bg-zinc-50 dark:bg-[#15110e] border border-zinc-200/80 dark:border-amber-950/40 hover:border-amber-500/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between h-full">

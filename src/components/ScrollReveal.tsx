@@ -19,8 +19,8 @@ export function ScrollReveal({
   children,
   direction = "up",
   delay = 0,
-  duration = 700,
-  distance = 40,
+  duration = 1000,
+  distance = 45,
   className = "",
   threshold = 0.08,
   once = true,
@@ -105,7 +105,7 @@ export function ScrollReveal({
         transitionProperty: "opacity, transform",
         transitionDuration: `${duration}ms`,
         transitionDelay: `${delay}ms`,
-        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+        transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
         willChange: isVisible ? "auto" : "transform, opacity",
       }}
       {...rest}
