@@ -7,12 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import {
   Menu,
   X,
-  Sparkles,
-  PhoneCall,
   Hammer,
-  Compass,
-  Layers,
-  MessageSquareQuote,
 } from "lucide-react";
 
 export function Navbar() {
@@ -50,7 +45,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
+          {/* Brand Logo - Rajesh Furniture Works */}
           <Link
             href="/"
             className="flex items-center gap-3 group focus:outline-none"
@@ -60,10 +55,10 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-serif font-black text-lg sm:text-xl tracking-tight text-zinc-900 dark:text-zinc-50 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
-                Rajesh<span className="text-amber-500 font-light ml-1">Furniture</span>
+                Rajesh<span className="text-amber-500 font-light ml-1.5">Furniture Works</span>
               </span>
               <span className="text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-medium -mt-0.5">
-                Master Woodcraft • Bespoke Works
+                Master Woodcraft & Bespoke Interiors
               </span>
             </div>
           </Link>
@@ -88,16 +83,9 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Side Tools: Theme Toggle & Consultation CTA */}
+          {/* Right Side: Theme Toggle Only (GET QUOTE removed) */}
           <div className="hidden sm:flex items-center gap-3">
             <ThemeToggle />
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-xs uppercase tracking-wider shadow-md shadow-amber-500/20 hover:shadow-amber-500/30 transition-all hover:scale-102"
-            >
-              <MessageSquareQuote className="w-4 h-4" />
-              <span>Get Quote</span>
-            </Link>
           </div>
 
           {/* Mobile Right Controls: Toggle + Hamburger */}
@@ -134,16 +122,6 @@ export function Navbar() {
               </Link>
             );
           })}
-
-          <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800/80">
-            <Link
-              href="/contact"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-sm uppercase tracking-wider shadow-lg shadow-amber-500/20"
-            >
-              <PhoneCall className="w-4 h-4" />
-              Request Custom Furniture Quote
-            </Link>
-          </div>
         </div>
       )}
     </header>

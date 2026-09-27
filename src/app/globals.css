@@ -60,3 +60,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(180, 140, 70, 0.6);
 }
+
+/* Remove Next.js dev icon from bottom left side */
+nextjs-portal,
+[data-nextjs-dev-indicator],
+[data-nextjs-toast],
+#nextjs-dev-overlay {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

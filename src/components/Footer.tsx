@@ -174,13 +174,27 @@ export function Footer() {
                   Rajesh Furniture Works Workshop, Industrial Craft Zone, Main Furniture Market
                 </span>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>+91 98765 43210 / +91 98765 43211</span>
+              <div className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <a href="tel:+919820879871" className="hover:text-amber-400 transition-colors block">
+                    +91 9820879871
+                  </a>
+                  <a href="tel:+919920706036" className="hover:text-amber-400 transition-colors block">
+                    +91 9920706036
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>contact@rajeshfurnitureworks.com</span>
+              <div className="flex items-start gap-2.5">
+                <Mail className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div className="space-y-0.5 break-all">
+                  <a href="mailto:vishwakarmaranjit8109@gmail.com" className="hover:text-amber-400 transition-colors block">
+                    vishwakarmaranjit8109@gmail.com
+                  </a>
+                  <a href="mailto:rv9766444@gmail.com" className="hover:text-amber-400 transition-colors block">
+                    rv9766444@gmail.com
+                  </a>
+                </div>
               </div>
               <div className="flex items-start gap-2.5 pt-1 text-xs text-zinc-500">
                 <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />

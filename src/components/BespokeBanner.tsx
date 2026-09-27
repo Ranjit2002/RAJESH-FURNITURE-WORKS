@@ -32,13 +32,13 @@ export function BespokeBanner() {
             Request Free Estimation & 3D Consult
           </Link>
           <a
-            href="https://wa.me/?text=Hello%20Rajesh%20Furniture%20Works,%20I%20would%20like%20to%20inquire%20about%20custom%20woodwork."
+            href="https://wa.me/919820879871?text=Hello%20Rajesh%20Furniture%20Works,%20I%20would%20like%20to%20inquire%20about%20custom%20woodwork."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-zinc-800/80 hover:bg-zinc-700/80 text-white font-medium text-sm border border-zinc-700 transition-all"
           >
             <PhoneCall className="w-4 h-4 text-amber-400" />
-            WhatsApp Workshop Direct
+            WhatsApp (+91 9820879871)
           </a>
         </div>
 

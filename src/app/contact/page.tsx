@@ -278,11 +278,20 @@ function ContactFormContent() {
                 </div>
                 <div>
                   <strong className="text-zinc-900 dark:text-zinc-100 block">
-                    Direct Master Carpenter Hotline
+                    Direct Phone Numbers
                   </strong>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                    +91 98765 43210 &bull; +91 98765 43211
-                  </p>
+                  <div className="text-xs text-zinc-600 dark:text-zinc-300 mt-1 space-y-0.5">
+                    <p>
+                      <a href="tel:+919820879871" className="hover:text-amber-500 transition-colors font-medium">
+                        +91 9820879871
+                      </a>
+                    </p>
+                    <p>
+                      <a href="tel:+919920706036" className="hover:text-amber-500 transition-colors font-medium">
+                        +91 9920706036
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -292,11 +301,20 @@ function ContactFormContent() {
                 </div>
                 <div>
                   <strong className="text-zinc-900 dark:text-zinc-100 block">
-                    Architect & Client Inquiries
+                    Email Inquiries
                   </strong>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                    contact@rajeshfurnitureworks.com
-                  </p>
+                  <div className="text-xs text-zinc-600 dark:text-zinc-300 mt-1 space-y-0.5">
+                    <p>
+                      <a href="mailto:vishwakarmaranjit8109@gmail.com" className="hover:text-amber-500 transition-colors font-medium break-all">
+                        vishwakarmaranjit8109@gmail.com
+                      </a>
+                    </p>
+                    <p>
+                      <a href="mailto:rv9766444@gmail.com" className="hover:text-amber-500 transition-colors font-medium break-all">
+                        rv9766444@gmail.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -319,13 +337,13 @@ function ContactFormContent() {
             {/* Quick WhatsApp Action */}
             <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800">
               <a
-                href="https://wa.me/?text=Hello%20Rajesh%20Furniture%20Works,%20I%20would%20like%20to%20discuss%20custom%20woodwork."
+                href="https://wa.me/919820879871?text=Hello%20Rajesh%20Furniture%20Works,%20I%20would%20like%20to%20discuss%20custom%20woodwork."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all"
               >
                 <MessageSquareShare className="w-4 h-4" />
-                Chat Directly on WhatsApp
+                Chat on WhatsApp (+91 9820879871)
               </a>
             </div>
           </div>

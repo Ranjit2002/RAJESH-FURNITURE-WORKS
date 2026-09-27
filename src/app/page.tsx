@@ -34,8 +34,8 @@ export default function HomePage() {
 
   const displayedItems =
     activeCategory === "All"
-      ? FURNITURE_DATA.slice(0, 8)
-      : FURNITURE_DATA.filter((item) => item.category === activeCategory).slice(0, 8);
+      ? FURNITURE_DATA.slice(0, 6)
+      : FURNITURE_DATA.filter((item) => item.category === activeCategory).slice(0, 6);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -89,8 +89,8 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Furniture Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Furniture Grid - Max grid-cols-3 for large images */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedItems.map((item) => (
             <FurnitureCard
               key={item.id}
