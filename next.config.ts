@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  devIndicators: false,
+  output: "export",
+  basePath: "/RAJESH-FURNITURE-WORKS",
+  images: {
+    unoptimized: true,
+  },
+  devIndicators: false
 };
 
 export default nextConfig;
