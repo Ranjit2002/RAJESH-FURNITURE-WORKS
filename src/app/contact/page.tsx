@@ -259,18 +259,27 @@ function ContactFormContent() {
 
             <div className="space-y-4 text-sm text-zinc-600 dark:text-zinc-300">
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4" />
+                <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0 mt-0.5 shadow-sm">
+                  <MapPin className="w-5 h-5" />
                 </div>
-                <div>
-                  <strong className="text-zinc-900 dark:text-zinc-100 block">
+                <div className="space-y-1">
+                  <strong className="text-base text-zinc-900 dark:text-zinc-50 font-bold block">
                     Workshop & Display Studio
                   </strong>
-                  <p className="text-xs text-zinc-600 dark:text-zinc-300 mt-1 leading-relaxed">
+                  <div className="p-3 rounded-xl bg-amber-500/10 dark:bg-amber-950/30 border border-amber-500/25 text-sm text-zinc-800 dark:text-zinc-100 font-medium leading-relaxed">
                     204, 2nd Floor, D-2,<br />
                     Shree Ganesh Residency, Maitri Park,<br />
                     Kasheli, Bhiwandi, Maharashtra 421302
-                  </p>
+                  </div>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Shree+Ganesh+Residency+Maitri+Park+Kasheli+Bhiwandi+Maharashtra+421302"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-amber-600 dark:text-amber-400 hover:text-amber-500 font-semibold pt-1"
+                  >
+                    <span>Get Directions on Google Maps</span>
+                    <MapPin className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </div>
 
@@ -342,7 +351,7 @@ function ContactFormContent() {
                 href="https://wa.me/919820879871?text=Hello%20Rajesh%20Furniture%20Works,%20I%20would%20like%20to%20discuss%20custom%20woodwork."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all"
               >
                 <MessageSquareShare className="w-4 h-4" />
                 Chat on WhatsApp (+91 9820879871)
@@ -350,27 +359,41 @@ function ContactFormContent() {
             </div>
           </div>
 
-          {/* Interactive Workshop Location Preview */}
-          <div className="p-6 rounded-3xl bg-zinc-900 text-white border border-zinc-800 space-y-3 relative overflow-hidden">
+          {/* Workshop Location & Physical Visit Card */}
+          <div className="p-7 rounded-3xl bg-zinc-900 text-white border border-zinc-800 space-y-4 relative overflow-hidden shadow-xl">
             <div className="flex items-center justify-between">
               <span className="text-xs uppercase tracking-widest text-amber-400 font-semibold flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
-                Workshop Consultations
+                Workshop Location
               </span>
-              <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+              <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-medium">
                 Open for Visits
               </span>
             </div>
-            <h4 className="font-serif font-bold text-lg text-white">
-              Schedule a Physical Timber Inspection
-            </h4>
-            <p className="text-xs text-zinc-300 leading-relaxed">
-              We welcome clients to witness our wood seasoning kilns, hand-chiseling bays, and live polish spray booths. Feel free to bring your floorplans.
-            </p>
-            <div className="pt-1">
-              <span className="text-xs text-amber-400 font-medium">
-                Tip: Contact details can be updated upon client requirement.
+            <div>
+              <h4 className="font-serif font-bold text-lg text-white">
+                Visit Us at Our Studio
+              </h4>
+              <p className="text-xs text-zinc-400 leading-relaxed mt-1">
+                Clients are welcome to inspect seasoned timber stock, joinery techniques, and discuss custom floorplans in person.
+              </p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-zinc-800/90 border border-amber-500/30 flex items-start gap-2.5 text-xs text-zinc-200">
+              <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+              <span className="font-medium leading-relaxed">
+                204, 2nd Floor, D-2, Shree Ganesh Residency, Maitri Park, Kasheli, Bhiwandi, Maharashtra 421302
               </span>
+            </div>
+            <div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Shree+Ganesh+Residency+Maitri+Park+Kasheli+Bhiwandi+Maharashtra+421302"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs uppercase tracking-wider transition-all"
+              >
+                <MapPin className="w-4 h-4" />
+                Open Location on Google Maps
+              </a>
             </div>
           </div>
         </div>
