@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/RAJESH-FURNITURE-WORKS//_next/:path+",
+        "destination": "/RAJESH-FURNITURE-WORKS/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
