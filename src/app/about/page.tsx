@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/utils/imagePath";
 import {
   Hammer,
   ShieldCheck,
@@ -123,7 +124,7 @@ export default function AboutPage() {
         <ScrollReveal direction="right" duration={2000} distance={45} className="lg:col-span-5">
           <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-amber-950/50 bg-zinc-900 group">
             <Image
-              src="/furniture/hall_1.jpg"
+              src={getAssetPath("/furniture/hall_1.jpg")}
               alt="Rajesh Furniture Works Craftsmanship Showcase"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"

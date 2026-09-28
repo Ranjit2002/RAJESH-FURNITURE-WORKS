@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FurnitureItem } from "@/data/furniture";
+import { getAssetPath } from "@/utils/imagePath";
 import {
   X,
   Sparkles,
@@ -79,7 +80,7 @@ export function FurnitureModal({ item, onClose }: FurnitureModalProps) {
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col">
               <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[620px] rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-200/80 dark:border-zinc-800 shadow-xl flex items-center justify-center p-3 sm:p-4 group">
                 <Image
-                  src={item.image}
+                  src={getAssetPath(item.image)}
                   alt={item.name}
                   fill
                   priority

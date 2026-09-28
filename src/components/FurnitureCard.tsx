@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { FurnitureItem } from "@/data/furniture";
+import { getAssetPath } from "@/utils/imagePath";
 import { Sparkles, Eye, ArrowUpRight, ShieldCheck, Hammer } from "lucide-react";
 
 interface FurnitureCardProps {
@@ -19,7 +20,7 @@ export function FurnitureCard({ item, onOpenModal }: FurnitureCardProps) {
       {/* Visual Image Container - Big & High-Impact */}
       <div className="relative aspect-4/3 sm:aspect-16/11 w-full overflow-hidden bg-zinc-900">
         <Image
-          src={item.image}
+          src={getAssetPath(item.image)}
           alt={item.name}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

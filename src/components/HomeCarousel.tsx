@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FurnitureItem, HERO_CAROUSEL_ITEMS } from "@/data/furniture";
+import { getAssetPath } from "@/utils/imagePath";
 import {
   ChevronLeft,
   ChevronRight,
@@ -61,7 +62,7 @@ export function HomeCarousel({ onOpenModal }: HomeCarouselProps) {
             }`}
           >
             <Image
-              src={item.image}
+              src={getAssetPath(item.image)}
               alt={item.name}
               fill
               priority={index === 0}
