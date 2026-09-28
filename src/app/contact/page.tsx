@@ -96,7 +96,7 @@ function ContactFormContent() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Contact Form Column - from Left */}
         <ScrollReveal direction="left" duration={2000} distance={45} className="lg:col-span-7">
-          <div className="bg-white dark:bg-[#14100d] p-6 sm:p-8 rounded-3xl border border-zinc-200/80 dark:border-amber-950/40 shadow-xl">
+          <div className="bg-white dark:bg-[#14100d] p-5 sm:p-8 rounded-3xl border border-zinc-200/80 dark:border-amber-950/40 shadow-xl">
             {submitted ? (
               <div className="py-12 text-center space-y-4 animate-fadeIn">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 flex items-center justify-center mx-auto">
@@ -237,15 +237,18 @@ function ContactFormContent() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-sm uppercase tracking-wider shadow-xl shadow-amber-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-[0.99] text-zinc-950 font-bold text-xs sm:text-sm uppercase tracking-wide sm:tracking-wider shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 transition-all flex items-center justify-center cursor-pointer disabled:opacity-50 group"
                 >
                   {loading ? (
-                    <span>Submitting Inquiry...</span>
+                    <span className="inline-flex items-center justify-center gap-2">
+                      <Sparkles className="w-4 h-4 animate-spin text-zinc-950 shrink-0" />
+                      <span>Submitting Inquiry...</span>
+                    </span>
                   ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      Submit Custom Furniture Request
-                    </>
+                    <span className="inline-flex items-center justify-center gap-2 sm:gap-2.5 text-center">
+                      <Send className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <span>Submit Custom Furniture Request</span>
+                    </span>
                   )}
                 </button>
               </form>
@@ -256,7 +259,7 @@ function ContactFormContent() {
         {/* Contact Info Cards Column - from Right */}
         <ScrollReveal direction="right" duration={2000} distance={45} className="lg:col-span-5 space-y-6">
           {/* Direct Workshop Details Card */}
-          <div className="p-7 rounded-3xl bg-zinc-50 dark:bg-[#15110e] border border-zinc-200/80 dark:border-amber-950/40 shadow-lg space-y-5">
+          <div className="p-5 sm:p-7 rounded-3xl bg-zinc-50 dark:bg-[#15110e] border border-zinc-200/80 dark:border-amber-950/40 shadow-lg space-y-5">
             <h3 className="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-amber-500" />
               Workshop & Studio Details
@@ -356,10 +359,17 @@ function ContactFormContent() {
                 href="https://wa.me/919820879871?text=Hello%20Rajesh%20Furniture%20Works,%20I%20would%20like%20to%20discuss%20custom%20woodwork."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all"
+                className="w-full flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white shadow-lg shadow-emerald-900/20 transition-all text-center group cursor-pointer"
               >
-                <MessageSquareShare className="w-4 h-4" />
-                Chat on WhatsApp (+91 9820879871)
+                <MessageSquareShare className="w-5 h-5 shrink-0 text-white group-hover:scale-110 transition-transform" />
+                <div className="flex flex-col items-center leading-tight">
+                  <span className="font-bold text-xs sm:text-sm uppercase tracking-wider">
+                    Chat on WhatsApp
+                  </span>
+                  <span className="text-[11px] sm:text-xs text-emerald-100 font-semibold tracking-normal mt-0.5">
+                    (+91 98208 79871)
+                  </span>
+                </div>
               </a>
             </div>
           </div>
